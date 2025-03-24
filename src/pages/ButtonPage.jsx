@@ -30,20 +30,30 @@ const ButtonPage = () => {
 
             <article>
                 <div className='article-title'>
+                    <h4>Danger</h4>
+                </div>
+                <div className='article-body'>
+                    <Button danger>Button</Button>
+                    <Button accent danger>Button</Button>
+                </div>
+            </article>
+
+            <article>
+                <div className='article-title'>
                     <h4>Button with icons</h4>
                 </div>
                 <div className='article-body'>
-                    <Button accent startIcon={<HandHeart />}>Button</Button>
+                    <Button startIcon={<HandHeart />}>Button</Button>
                     <Button accent endIcon={<HandHeart />}>Button</Button>
                 </div>
             </article>
 
             <article>
                 <div className='article-title'>
-                    <h4>Icon Button</h4>
+                    <h4>Disabled</h4>
                 </div>
                 <div className='article-body'>
-                    <IconButton><HandHeart /></IconButton>
+                    <Button disabled>Button</Button>
                 </div>
             </article>
 
@@ -58,10 +68,15 @@ const ButtonPage = () => {
 
             <article>
                 <div className='article-title'>
-                    <h4>Disabled</h4>
+                    <h4>IconButton</h4>
                 </div>
                 <div className='article-body'>
-                    <Button disabled>Button</Button>
+                    <IconButton><HandHeart /></IconButton>
+                    <IconButton ghost><HandHeart /></IconButton>
+                    <IconButton danger><HandHeart /></IconButton>
+                    <IconButton ghost danger><HandHeart /></IconButton>
+                    <IconButton disabled><HandHeart /></IconButton>
+                    <IconButton ghost disabled><HandHeart /></IconButton>
                 </div>
             </article>
 

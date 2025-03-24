@@ -1,8 +1,8 @@
 import React from 'react'
 
-const IconButton = ({ children }) => {
+const IconButton = ({ children, ghost, danger, disabled }) => {
     return (
-        <button className='icon-button'>{children}</button>
+        <button disabled={disabled} className={`icon-button ${ghost ? "ghost" : ""} ${danger ? "danger" : ""}`}>{children}</button>
     )
 }
 

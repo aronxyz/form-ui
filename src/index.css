@@ -3,6 +3,8 @@
 @import "@radix-ui/colors/gray-dark.css";
 @import "@radix-ui/colors/teal.css";
 @import "@radix-ui/colors/teal-dark.css";
+@import "@radix-ui/colors/tomato.css";
+@import "@radix-ui/colors/tomato-dark.css";
 @import "@radix-ui/colors/black-alpha.css";
 
 *,
@@ -39,80 +41,98 @@ a:active {
 
 /* Base styles (Desktop - 992px and up) */
 h1 {
-  font-size: 2.125rem; /* 34px */
+  font-size: 2.125rem;
+  /* 34px */
 }
 
 h2 {
-  font-size: 1.875rem; /* 30px */
+  font-size: 1.875rem;
+  /* 30px */
 }
 
 h3 {
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.5rem;
+  /* 24px */
 }
 
 h4 {
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.25rem;
+  /* 20px */
 }
 
 h5 {
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.125rem;
+  /* 18px */
 }
 
 h6 {
-  font-size: 1rem; /* 16px */
+  font-size: 1rem;
+  /* 16px */
 }
 
 /* Tablet (576px to 992px) */
 @media (max-width: 992px) and (min-width: 576px) {
   h1 {
-    font-size: 2rem; /* 32px */
+    font-size: 2rem;
+    /* 32px */
   }
 
   h2 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem;
+    /* 24px */
   }
 
   h3 {
-    font-size: 1.25rem; /* 20px */
+    font-size: 1.25rem;
+    /* 20px */
   }
 
   h4 {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
+    /* 18px */
   }
 
   h5 {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
+    /* 18px */
   }
 
   h6 {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
+    /* 18px */
   }
 }
 
 /* Mobile (up to 576px) */
 @media (max-width: 576px) {
   h1 {
-    font-size: 1.5rem; /* 24px */
+    font-size: 1.5rem;
+    /* 24px */
   }
 
   h2 {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
+    /* 18px */
   }
 
   h3 {
-    font-size: 1.125rem; /* 18px */
+    font-size: 1.125rem;
+    /* 18px */
   }
 
   h4 {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
+    /* 16px */
   }
 
   h5 {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
+    /* 16px */
   }
 
   h6 {
-    font-size: 1rem; /* 16px */
+    font-size: 1rem;
+    /* 16px */
   }
 }
 
@@ -218,18 +238,14 @@ article {
   border-bottom: 1px solid var(--gray-6);
 }
 
-.article-title h3 {
-  font-weight: 400;
-}
-
 .article-title h4 {
-  font-weight: 400;
-  font-size: 1rem;
+  font-weight: 500;
 }
 
 .article-body {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 32px;
   padding: 24px;
 }
@@ -281,6 +297,20 @@ article {
   }
 }
 
+.hstack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: stretch;
+}
+
+.vstack {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-self: stretch;
+}
+
 /* ---- */
 
 /* ---- form styles ---- */
@@ -292,6 +322,7 @@ button {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  font-size: 1rem;
   color: var(--teal-9);
   padding: 10px;
   background-color: var(--teal-3);
@@ -300,7 +331,7 @@ button {
 }
 
 button:not(.icon-button) {
-  max-height: 40px;
+  height: 40px;
   min-width: 12ch;
 }
 
@@ -311,6 +342,22 @@ button:hover {
 
 button:active {
   background-color: var(--teal-5);
+}
+
+button.danger {
+  color: var(--tomato-9);
+  padding: 10px;
+  background-color: var(--tomato-3);
+  border: 1px solid var(--tomato-6);
+}
+
+button.danger:hover {
+  border-color: var(--tomato-7);
+  background-color: var(--tomato-4);
+}
+
+button.danger:active {
+  background-color: var(--tomato-5);
 }
 
 button.accent {
@@ -324,6 +371,20 @@ button.accent:hover {
 }
 
 button.accent:active {
+  filter: brightness(0.92) saturate(1.1);
+}
+
+button.accent.danger {
+  color: #fff;
+  background-color: var(--tomato-9);
+  border-color: transparent;
+}
+
+button.accent:hover.danger {
+  background-color: var(--tomato-10);
+}
+
+button.accent:active.danger {
   filter: brightness(0.92) saturate(1.1);
 }
 
@@ -346,6 +407,122 @@ button[disabled] .spinner {
 
 button.icon-button {
   padding: 6px;
+}
+
+button.icon-button.ghost {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+button.icon-button.ghost:hover {
+  background-color: var(--teal-4);
+  color: var(--teal-11);
+}
+
+button.icon-button.ghost:active {
+  background-color: var(--teal-5);
+}
+
+button.icon-button.ghost.danger:hover {
+  background-color: var(--tomato-4);
+  color: var(--tomato-11);
+}
+
+button.icon-button.ghost.danger:active {
+  background-color: var(--tomato-5);
+}
+
+button.icon-button.ghost.danger:hover {
+  background-color: var(--tomato-4);
+  color: var(--tomato-11);
+}
+
+button.icon-button.ghost.danger:active {
+  background-color: var(--tomato-5);
+}
+
+/* ---- */
+
+/* text field */
+
+.form-group {
+  width: 100%;
+}
+
+.form-group+.form-group {
+  margin-top: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100%;
+  height: 40px;
+  padding: 10px 14px;
+  font-size: 1rem;
+  background-color: var(--gray-1);
+  border: 1px solid var(--gray-6);
+}
+
+.form-control:focus {
+  border-color: var(--teal-7);
+  box-shadow: 0 0 0 1px var(--teal-7);
+  outline: 2px solid transparent;
+}
+
+.form-control.is-invalid {
+  border-color: var(--tomato-6);
+}
+
+.form-control:focus.is-invalid {
+  border-color: var(--tomato-7);
+  box-shadow: 0 0 0 1px var(--tomato-7);
+}
+
+.form-text {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.form-text.invalid-feedback {
+  color: var(--tomato-11);
+}
+
+.input-adorment {
+  position: relative;
+}
+
+.input-start-adorment, .input-end-adorment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 6px;
+}
+
+.input-start-adorment {
+  left: 4px;
+}
+
+.input-end-adorment {
+  right: 4px;
+}
+
+.input-adorment-interactive:hover {
+  background-color: var(--gray-4);
+  cursor: pointer;
+}
+
+.input-adorment:has(.input-start-adorment) .form-control {
+  padding-left: 38px;
+}
+.input-adorment:has(.input-end-adorment) .form-control {
+  padding-right: 38px;
 }
 
 /* ---- */

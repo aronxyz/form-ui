@@ -6,7 +6,8 @@ const AsideNav = () => {
             <nav>
                 <ul>
                     <li><NavLink className={({ isActive }) => `nav-link ${isActive ? "nav-link-active" : ""}`} to={"button"}>Button</NavLink></li>
-                    <li><NavLink className={({ isActive }) => `nav-link ${isActive ? "nav-link-active" : ""}`} to={"textarea"}>Textarea</NavLink></li>
+                    <li><NavLink className={({ isActive }) => `nav-link ${isActive ? "nav-link-active" : ""}`} to={"text-field"}>Text Field</NavLink></li>
+                    <li><NavLink className={({ isActive }) => `nav-link ${isActive ? "nav-link-active" : ""}`} to={"select"}>Select</NavLink></li>
                 </ul>
             </nav>
         </aside>
