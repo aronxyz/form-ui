@@ -14,7 +14,7 @@ const TextFieldPage = () => {
                     <h4>Base</h4>
                 </div>
                 <div className='article-body'>
-                    <TextField type={"text"} id={"base"} name={"base"} label={"Base text field"} />
+                    <TextField type={"text"} id={"base-text-field"} name={"base-text-field"} label={"Base text field"} />
                 </div>
             </article>
 
@@ -23,7 +23,16 @@ const TextFieldPage = () => {
                     <h4>Invalid</h4>
                 </div>
                 <div className='article-body'>
-                    <TextField type={"text"} id={"invalid"} name={"invalid"} label={"Invalid text field"} withFeedback isInvalid />
+                    <TextField type={"text"} id={"invalid-text-field"} name={"invalid-text-field"} label={"Invalid text field"} withFeedback isInvalid />
+                </div>
+            </article>
+            
+            <article>
+                <div className='article-title'>
+                    <h4>Disabled</h4>
+                </div>
+                <div className='article-body'>
+                    <TextField type={"text"} id={"disabled-text-field"} name={"disabled-text-field"} label={"Disabled text field"} disabled />
                 </div>
             </article>
 
