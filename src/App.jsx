@@ -15,7 +15,7 @@ function App() {
     <>
       <Routes>
         <Route path='/' element={<Layout />}>
-          <Route path='button' element={<ButtonPage />} />
+          <Route index element={<ButtonPage />} />
           <Route path='text-field' element={<TextFieldPage />} />
           <Route path='select' element={<SelectPage />} />
           <Route path='checks-and-radios' element={<ChecksAndRadiosPage />} />
